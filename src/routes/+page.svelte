@@ -1,14 +1,18 @@
+
 <script lang="ts">
-	import {
+	//@ts-nocheck
+	import Auth from '$lib/Auth.svelte';
+import {
 		accountChainId,
 		connected,
-		connectMetamask,
 		connectWalletConnect,
 		disconnect,
 		walletAddress
 	} from '$lib/stores/provider';
 	import { balanceOnBlock } from '$lib/stores/state';
+	import { ethers } from 'ethers';
 	import { formatEther } from 'ethers/lib/utils';
+
 </script>
 
 <main class="flex flex-col p-10 w-screen h-screen items-center gap-5 font-serif">
@@ -21,11 +25,9 @@
 		<h2 class="text-xl text-black font-semibold">
 			$accountChainId: {JSON.stringify($accountChainId)}
 		</h2>
-		<button
-			on:click={connectMetamask}
-			class="p-3 rounded-xl text-xl bg-black text-white font-semibold hover:scale-[1.05] transition transition-200"
-			>Connect via MetaMask</button
-		>
+		
+		<Auth></Auth>
+
 		<button
 			on:click={connectWalletConnect}
 			class="p-3 rounded-xl text-xl bg-black text-white font-semibold hover:scale-[1.05] transition transition-200"
