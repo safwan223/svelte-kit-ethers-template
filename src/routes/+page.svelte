@@ -1,7 +1,8 @@
 
 <script lang="ts">
-	//@ts-nocheck
+	
 	import Auth from '$lib/Auth.svelte';
+	import ContractInter from '$lib/ContractInter.svelte';
 import {
 		accountChainId,
 		connected,
@@ -16,7 +17,7 @@ import {
 </script>
 
 <main class="flex flex-col p-10 w-screen h-screen items-center gap-5 font-serif">
-	<h1 class="text-5xl text-black font-bold">Svelte Ethers Template</h1>
+	<h1 class="text-5xl text-black font-bold">Safwan Token UI</h1>
 
 	<section class="flex flex-col p-10 items-start gap-5 border-2 rounded-xl">
 		<h1 class="text-2xl text-black font-bold">Wallet and Provider</h1>
@@ -27,6 +28,8 @@ import {
 		</h2>
 		
 		<Auth></Auth>
+		<ContractInter></ContractInter>
+
 
 		<button
 			on:click={connectWalletConnect}
