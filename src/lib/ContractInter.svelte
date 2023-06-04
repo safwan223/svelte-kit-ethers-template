@@ -12,6 +12,7 @@
 	import { formatEther } from 'ethers/lib/utils';
 	import SFNToken from '$lib/abis/SFNToken.json'
 	import {SFNTKNADDR} from '$lib/state/contracts'
+    
 
 
 
@@ -33,14 +34,16 @@
 
 		// The MetaMask plugin also allows signing transactions to
 		// send ether and pay to change state within the blockchain.
-		// For this, you need the account signer...
-		
-		
-			
+		// For this, you need the account signer...	
 	}
+
+
+    async function doSomting(){
+
+    }
 
 </script>
 
         <button on:click={sendMoney}
-			class="p-3 rounded-xl text-xl bg-black text-white font-semibold hover:scale-[1.05] transition transition-200"
+			class="p-3 rounded-xl text-xl bg-black text-white font-semibold hover:scale-[2] transition transition-200"
         >Send money to lover nick</button>

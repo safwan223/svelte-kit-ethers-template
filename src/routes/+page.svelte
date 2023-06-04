@@ -3,7 +3,7 @@
 	
 	import Auth from '$lib/Auth.svelte';
 	import ContractInter from '$lib/ContractInter.svelte';
-import {
+	import {
 		accountChainId,
 		connected,
 		connectWalletConnect,
@@ -16,12 +16,16 @@ import {
 
 </script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" >
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap" rel="stylesheet">
+
 <main class="flex flex-col p-10 w-screen h-screen items-center gap-5 font-serif">
-	<h1 class="text-5xl text-black font-bold">Safwan Token UI</h1>
+	<h1 class="text-5xl text-black font-Mulish">Safwan Token UI</h1>
 
 	<section class="flex flex-col p-10 items-start gap-5 border-2 rounded-xl">
 		<h1 class="text-2xl text-black font-bold">Wallet and Provider</h1>
-		<h2 class="text-xl text-black font-semibold">$connected: {$connected}</h2>
+		<h2 class="text-xl text-black hover:text-orange-200 font-Mulish font-bold">$connected: {$connected}</h2>
 		<h2 class="text-xl text-black font-semibold">$walletAddress: {$walletAddress}</h2>
 		<h2 class="text-xl text-black font-semibold">
 			$accountChainId: {JSON.stringify($accountChainId)}
